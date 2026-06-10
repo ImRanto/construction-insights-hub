@@ -1,6 +1,6 @@
-import { createStart, createMiddleware } from "@tanstack/react-start";
-
-import { renderErrorPage } from "./lib/error-page";
+import { createServer } from 'vite';
+import { createMiddleware } from '@tanstack/react-start';
+import { renderErrorPage } from './lib/error-page';
 
 const errorMiddleware = createMiddleware().server(async ({ next }) => {
   try {
@@ -17,6 +17,22 @@ const errorMiddleware = createMiddleware().server(async ({ next }) => {
   }
 });
 
-export const startInstance = createStart(() => ({
+export const startInstance = () => ({
   requestMiddleware: [errorMiddleware],
-}));
+});
+
+export default async function start() {
+  const server = await createServer({
+    server: {
+      middlewareMode: true,
+    },
+    plugins: [],
+  });
+
+  return {
+    listen: async (port: number) => {
+      await server.listen(port);
+      console.log(`Server running on port ${port}`);
+    },
+  };
+}

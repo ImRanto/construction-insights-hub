@@ -1,0 +1,1 @@
+export { ArticleService, type Article } from './article-service';
