@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform, useInView, animate, AnimatePresence } from "framer-motion";
 import {
-  ArrowRight, Building2, Home, Hammer, TrafficCone, Bridge, Layers,
+  ArrowRight, Building2, Home, Hammer, TrafficCone, Waypoints, Layers,
   CheckCircle2, ShieldCheck, Users, Clock, Wrench, Sparkles, Award,
   ChevronLeft, ChevronRight, Mail, MapPin, Phone, Facebook, Linkedin, Twitter, Instagram,
   FileSearch, ClipboardList, FileCheck, Calendar, HardHat, KeyRound, Quote,
@@ -103,7 +103,7 @@ const services = [
     items: ["Routes & autoroutes", "Voiries urbaines", "Réseaux d'assainissement", "Aménagements paysagers"],
   },
   {
-    icon: Bridge, title: "Ouvrages d'art",
+    icon: Waypoints, title: "Ouvrages d'art",
     desc: "Structures d'exception qui repoussent les limites de l'ingénierie.",
     items: ["Ponts & passerelles", "Viaducs", "Structures métalliques", "Tunnels & galeries"],
   },
