@@ -601,9 +601,9 @@ function Footer() {
           <div>
             <h4 className="font-display font-bold">Contact</h4>
             <ul className="mt-4 space-y-3 text-sm text-primary-foreground/70">
-              <li className="flex items-start gap-2.5"><MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand" /> 24 avenue des Bâtisseurs, 75015 Paris</li>
-              <li className="flex items-center gap-2.5"><Phone className="h-4 w-4 flex-shrink-0 text-brand" /> +33 1 23 45 67 89</li>
-              <li className="flex items-center gap-2.5"><Mail className="h-4 w-4 flex-shrink-0 text-brand" /> contact@batipro.fr</li>
+              <li className="flex items-start gap-2.5"><MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand" /><span>24 avenue des Bâtisseurs, 75015 Paris</span></li>
+              <li className="flex items-center gap-2.5"><Phone className="h-4 w-4 flex-shrink-0 text-brand" /><span>+33 1 23 45 67 89</span></li>
+              <li className="flex items-center gap-2.5"><Mail className="h-4 w-4 flex-shrink-0 text-brand" /><span>contact@batipro.fr</span></li>
             </ul>
           </div>
         </div>
